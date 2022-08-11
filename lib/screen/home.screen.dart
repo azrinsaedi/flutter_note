@@ -8,8 +8,8 @@ class HomeScreen extends StatelessWidget{
       appBar: AppBar(
         title: Text('Awesome List App'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: ListView(
+        // crossAxisAlignment: CrossAxisAlignment.stretch,
         children:
           List.generate(taskList.length, (index) => TaskContainer(task: taskList[index])),
       ),
@@ -29,7 +29,7 @@ class TaskContainer extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade200,
+          color: Color(0xFFF1F1F1),
           border: Border.all(color: Colors.grey.shade300),
         ),
         padding: const EdgeInsets.all(8.0),
